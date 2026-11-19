@@ -2,7 +2,7 @@
 
 Статический сайт на Bootstrap 5.3 для tbn.ge. Сейчас на tbn.ge стоит шаблон 2015 года (GoTo CMS) с пустыми разделами. Сборка не нужна: файлы можно открыть в браузере или выложить на любой хостинг.
 
-Структура и движок те же, что у сайта Vinci Development; поменяны бренд, цвета и контент.
+Контент — из открытых источников (старый tbn.ge, geoln.com, madloba.info); где данных нет, тексты типовые.
 
 ## Структура
 ```
@@ -12,7 +12,7 @@ project.html?id=...   карточка объекта (varketili, akhmeteli), д
 news.html             новости и статьи
 article.html?id=...   материал (шаблон)
 about.html, services.html, buyers.html, contacts.html, careers.html, privacy.html, 404.html
-assets/css/style.css  тема: цвета в :root (--vx-navy синий, --vx-accent оранжевый из логотипа)
+assets/css/style.css  тема: цвета в :root (--tbn-navy графитово-синий, --tbn-accent оранжевый из логотипа)
 assets/js/data.js     контент: компания, проекты, новости (ru/en/ka) + SVG-иллюстрации
 assets/js/i18n.js     переводы интерфейса и страниц (en, ka)
 assets/js/main.js     шапка, подвал, логотип, карточки, фильтр, форма

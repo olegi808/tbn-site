@@ -11,7 +11,7 @@
   "use strict";
   const D = window.TBN;
   const C = D.company;
-  const I = window.VX_I18N;
+  const I = window.TBN_I18N;
   const page = document.body.dataset.page || "";
 
   /* ---------- Язык ---------- */
@@ -42,19 +42,19 @@
   ];
 
   const LOGO = `
-    <span class="vx-logo">
+    <span class="tbn-logo">
       <svg viewBox="0 0 40 40" aria-hidden="true">
         <rect width="40" height="40" rx="3" fill="#0f1c29"/>
         <path d="M8 17 L25 7 L33 17Z" fill="#e8891c"/>
         <g fill="#fff"><rect x="9" y="17" width="2.4" height="16"/><rect x="13" y="17" width="2.4" height="16"/><rect x="17" y="17" width="2.4" height="16"/><rect x="21" y="17" width="2.4" height="16"/></g>
         <rect x="25" y="17" width="8" height="16" fill="#1a5f8f"/>
       </svg>
-      <span class="vx-logo__text"><span class="vx-logo__name"><span class="t">T</span><span class="bn">BN</span></span><span class="vx-logo__sub">Development</span></span>
+      <span class="tbn-logo__text"><span class="tbn-logo__name"><span class="t">T</span><span class="bn">BN</span></span><span class="tbn-logo__sub">Development</span></span>
     </span>`;
 
   /* ---------- Шапка ---------- */
   const header = `
-    <div class="vx-topbar d-none d-md-block">
+    <div class="tbn-topbar d-none d-md-block">
       <div class="container d-flex justify-content-between align-items-center py-2">
         <div class="d-flex gap-4">
           <span><i class="bi bi-geo-alt me-1"></i>${esc(t("ui.address"))}</span>
@@ -66,15 +66,15 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg vx-nav sticky-top py-2" aria-label="${esc(t("ui.mainNav"))}">
+    <nav class="navbar navbar-expand-lg tbn-nav sticky-top py-2" aria-label="${esc(t("ui.mainNav"))}">
       <div class="container">
         <a class="navbar-brand" href="index.html" aria-label="${esc(t("ui.toHome"))}">${LOGO}</a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#vxMenu" aria-controls="vxMenu" aria-label="${esc(t("ui.openMenu"))}">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#tbnMenu" aria-controls="tbnMenu" aria-label="${esc(t("ui.openMenu"))}">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="vxMenu" aria-labelledby="vxMenuLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="tbnMenu" aria-labelledby="tbnMenuLabel">
           <div class="offcanvas-header">
-            <span id="vxMenuLabel">${LOGO}</span>
+            <span id="tbnMenuLabel">${LOGO}</span>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="${esc(t("ui.close"))}"></button>
           </div>
           <div class="offcanvas-body align-items-lg-center">
@@ -82,7 +82,7 @@
               ${NAV.map((n) => `<li class="nav-item"><a class="nav-link${n.key === page ? " active" : ""}" ${n.key === page ? 'aria-current="page"' : ""} href="${n.href}">${esc(t("nav." + n.key))}</a></li>`).join("")}
             </ul>
             <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-4 mt-lg-0">
-              <div class="btn-group vx-lang align-self-start align-self-lg-center" role="group" aria-label="${esc(t("ui.lang"))}">
+              <div class="btn-group tbn-lang align-self-start align-self-lg-center" role="group" aria-label="${esc(t("ui.lang"))}">
                 ${SUPPORTED.map((l) => `<a class="btn btn-light${l === lang ? " active" : ""}" href="${langHref(l)}" hreflang="${l}" lang="${l}" title="${I.langs[l]}"${l === lang ? ' aria-current="true"' : ""}>${l === "ka" ? "GE" : l.toUpperCase()}</a>`).join("")}
               </div>
               <a class="btn btn-primary btn-sm text-nowrap" href="${tel(C.phones[0])}" aria-label="${C.phones[0]}"><i class="bi bi-telephone"></i><span class="ms-2 d-lg-none d-xl-inline">${C.phones[0]}</span></a>
@@ -94,15 +94,15 @@
 
   /* ---------- Подвал ---------- */
   const footer = `
-    <footer class="vx-footer pt-5">
+    <footer class="tbn-footer pt-5">
       <div class="container">
         <div class="row g-4 pb-4">
           <div class="col-lg-4">
             <a href="index.html" class="text-white d-inline-block mb-3" aria-label="${esc(t("ui.toHome"))}">${LOGO}</a>
             <p class="mb-3">${esc(t("ft.about"))}</p>
             <div class="d-flex gap-2">
-              ${C.facebook ? `<a class="vx-social" href="${C.facebook}" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>` : ""}
-              <a class="vx-social" href="https://wa.me/${C.phones[0].replace(/\D/g, "")}" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+              ${C.facebook ? `<a class="tbn-social" href="${C.facebook}" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>` : ""}
+              <a class="tbn-social" href="https://wa.me/${C.phones[0].replace(/\D/g, "")}" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
             </div>
           </div>
           <div class="col-6 col-lg-2">
@@ -139,7 +139,7 @@
         </div>
       </div>
     </footer>
-    <button class="vx-totop" type="button" aria-label="${esc(t("ui.toTop"))}"><i class="bi bi-arrow-up"></i></button>`;
+    <button class="tbn-totop" type="button" aria-label="${esc(t("ui.toTop"))}"><i class="bi bi-arrow-up"></i></button>`;
 
   document.querySelectorAll('[data-include="header"]').forEach((el) => (el.outerHTML = header));
   document.querySelectorAll('[data-include="footer"]').forEach((el) => (el.outerHTML = footer));
@@ -161,16 +161,16 @@
 
   /* ---------- Карточки ---------- */
   const projectCard = (p, i) => `
-    <div class="col-md-6 vx-reveal" data-status="${p.status}">
-      <a class="vx-project" href="project.html?id=${encodeURIComponent(p.id)}">
-        <div class="vx-project__media">
+    <div class="col-md-6 tbn-reveal" data-status="${p.status}">
+      <a class="tbn-project" href="project.html?id=${encodeURIComponent(p.id)}">
+        <div class="tbn-project__media">
           ${p.image ? `<img src="${esc(p.image)}" alt="${esc(L(p.title))}" loading="lazy">` : D.buildingSVG(p.floors || 5, p.palette, i)}
-          <span class="vx-project__status${p.status === "active" ? " vx-project__status--active" : ""}">${esc(L(p.statusLabel))}</span>
+          <span class="tbn-project__status${p.status === "active" ? " tbn-project__status--active" : ""}">${esc(L(p.statusLabel))}</span>
         </div>
-        <div class="vx-project__body">
-          <div class="vx-project__district"><i class="bi bi-geo-alt me-1"></i>${esc(L(p.district))}</div>
-          <h3 class="vx-project__title">${esc(L(p.title))}</h3>
-          <div class="vx-project__meta">
+        <div class="tbn-project__body">
+          <div class="tbn-project__district"><i class="bi bi-geo-alt me-1"></i>${esc(L(p.district))}</div>
+          <h3 class="tbn-project__title">${esc(L(p.title))}</h3>
+          <div class="tbn-project__meta">
             ${p.floors ? `<span><i class="bi bi-building"></i>${p.floors} ${esc(t("card.floors"))}</span>` : ""}
             ${p.apartments ? `<span><i class="bi bi-door-closed"></i>${p.apartments} ${esc(t("card.apts"))}</span>` : ""}
             <span><i class="bi bi-calendar3"></i>${esc(p.year)}</span>
@@ -187,14 +187,14 @@
     catch (e) { return d; }
   };
   const newsCard = (n, i) => `
-    <div class="col-md-6 col-lg-4 vx-reveal">
-      <a class="vx-news" href="article.html?id=${encodeURIComponent(n.id)}">
-        <div class="vx-news__media">${n.image ? `<img src="${esc(n.image)}" alt="" loading="lazy">` : D.newsSVG(i)}</div>
-        <div class="vx-news__body">
-          <div class="vx-news__meta"><span class="vx-news__tag">${esc(L(n.tag))}</span><time datetime="${n.date}">${fmtDate(n.date)}</time></div>
+    <div class="col-md-6 col-lg-4 tbn-reveal">
+      <a class="tbn-news" href="article.html?id=${encodeURIComponent(n.id)}">
+        <div class="tbn-news__media">${n.image ? `<img src="${esc(n.image)}" alt="" loading="lazy">` : D.newsSVG(i)}</div>
+        <div class="tbn-news__body">
+          <div class="tbn-news__meta"><span class="tbn-news__tag">${esc(L(n.tag))}</span><time datetime="${n.date}">${fmtDate(n.date)}</time></div>
           <h3>${esc(L(n.title))}</h3>
           <p>${esc(L(n.excerpt))}</p>
-          <span class="vx-news__more">${esc(t("card.read"))} <i class="bi bi-arrow-right"></i></span>
+          <span class="tbn-news__more">${esc(t("card.read"))} <i class="bi bi-arrow-right"></i></span>
         </div>
       </a>
     </div>`;
@@ -251,7 +251,7 @@
     const n = D.news.find((x) => x.id === id) || D.news[0];
     document.title = `${L(n.title)} — TBN Development`;
     document.querySelector("[data-a-title]").textContent = L(n.title);
-    articleHost.querySelector("[data-a-meta]").innerHTML = `<span class="vx-news__tag">${esc(L(n.tag))}</span> · <time datetime="${n.date}">${fmtDate(n.date)}</time>`;
+    articleHost.querySelector("[data-a-meta]").innerHTML = `<span class="tbn-news__tag">${esc(L(n.tag))}</span> · <time datetime="${n.date}">${fmtDate(n.date)}</time>`;
     articleHost.querySelector("[data-a-lead]").textContent = L(n.excerpt);
     articleHost.querySelector("[data-a-visual]").innerHTML = D.newsSVG(0);
   }
@@ -273,8 +273,8 @@
   }
 
   /* ---------- Поведение ---------- */
-  const nav = document.querySelector(".vx-nav");
-  const toTop = document.querySelector(".vx-totop");
+  const nav = document.querySelector(".tbn-nav");
+  const toTop = document.querySelector(".tbn-totop");
   const onScroll = () => {
     nav && nav.classList.toggle("is-scrolled", window.scrollY > 10);
     toTop && toTop.classList.toggle("is-visible", window.scrollY > 600);
@@ -284,15 +284,15 @@
   toTop && toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
 
   /* Закрывать мобильное меню при переходе по якорю */
-  document.querySelectorAll("#vxMenu .nav-link").forEach((a) =>
+  document.querySelectorAll("#tbnMenu .nav-link").forEach((a) =>
     a.addEventListener("click", () => {
-      const oc = window.bootstrap && bootstrap.Offcanvas.getInstance("#vxMenu");
+      const oc = window.bootstrap && bootstrap.Offcanvas.getInstance("#tbnMenu");
       oc && oc.hide();
     })
   );
 
   /* Появление блоков */
-  const reveal = document.querySelectorAll(".vx-reveal");
+  const reveal = document.querySelectorAll(".tbn-reveal");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }

@@ -38,9 +38,9 @@ window.TBN = {
         ka: "14-სართულიანი მონოლითური საცხოვრებელი კომპლექსი 224 ბინით, მეტრო „ვარკეთილიდან“ სამ წუთში. მიწისქვეშა პარკინგი, საბავშვო მოედანი და რეცეფცია."
       },
       features: {
-        ru: ["Монолитный железобетонный каркас", "3 минуты пешком до метро «Варкетили»", "Квартиры от 43,7 м²", "Сдача в «чёрном каркасе»", "Подземный паркинг", "Детская площадка во дворе", "Ресепшен в доме", "Ипотека банков-партнёров"],
-        en: ["Monolithic reinforced-concrete frame", "3-minute walk to Varketili metro", "Apartments from 43.7 m²", "Delivered as “black frame”", "Underground parking", "Playground in the courtyard", "Staffed reception", "Mortgage from partner banks"],
-        ka: ["მონოლითური რკინაბეტონის კარკასი", "3 წუთი ფეხით მეტრო „ვარკეთილამდე“", "ბინები 43,7 მ²-დან", "ჩაბარება „შავ კარკასში“", "მიწისქვეშა პარკინგი", "საბავშვო მოედანი ეზოში", "რეცეფცია შენობაში", "იპოთეკა პარტნიორი ბანკებისგან"]
+        ru: ["Монолитный железобетонный каркас", "3 минуты пешком до метро «Варкетили»", "Квартиры от 43,7 м²", "Квартиры без отделки", "Подземный паркинг", "Детская площадка во дворе", "Ресепшен в доме", "Ипотека грузинских банков"],
+        en: ["Monolithic reinforced-concrete frame", "3-minute walk to Varketili metro", "Apartments from 43.7 m²", "Sold without finishing", "Underground parking", "Playground in the courtyard", "Staffed reception", "Mortgage from Georgian banks"],
+        ka: ["მონოლითური რკინაბეტონის კარკასი", "3 წუთი ფეხით მეტრო „ვარკეთილამდე“", "ბინები 43,7 მ²-დან", "ბინები მოპირკეთების გარეშე", "მიწისქვეშა პარკინგი", "საბავშვო მოედანი ეზოში", "რეცეფცია შენობაში", "იპოთეკა ქართული ბანკებისგან"]
       },
       palette: ["#e9eef3", "#e8891c"]
     },
@@ -104,18 +104,18 @@ window.TBN = {
       demo: true
     },
     {
-      id: "black-frame",
+      id: "installments",
       date: "2026-03-02",
       tag: { ru: "Статьи", en: "Articles", ka: "სტატიები" },
       title: {
-        ru: "Квартира в «чёрном каркасе»: что вы получаете и сколько стоит ремонт",
-        en: "A “black frame” apartment: what you get and what renovation costs",
-        ka: "ბინა „შავ კარკასში“: რას იღებთ და რა ღირს რემონტი"
+        ru: "Рассрочка от застройщика: как это работает",
+        en: "Developer installments: how they work",
+        ka: "განვადება დეველოპერისგან: როგორ მუშაობს"
       },
       excerpt: {
-        ru: "Разбираем, что входит в «чёрный каркас» в новостройках Тбилиси и как спланировать бюджет на отделку.",
-        en: "What a “black frame” apartment includes in Tbilisi new builds, and how to budget for finishing.",
-        ka: "რას მოიცავს „შავი კარკასი“ თბილისის ახალაშენებულ სახლებში და როგორ დავგეგმოთ მოპირკეთების ბიუჯეტი."
+        ru: "Первый взнос, график платежей и регистрация права собственности — по шагам.",
+        en: "Down payment, payment schedule and ownership registration — step by step.",
+        ka: "პირველადი შენატანი, გადახდების გრაფიკი და საკუთრების რეგისტრაცია — ნაბიჯ-ნაბიჯ."
       },
       demo: true
     }
