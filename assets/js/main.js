@@ -85,7 +85,7 @@
               <div class="btn-group vx-lang align-self-start align-self-lg-center" role="group" aria-label="${esc(t("ui.lang"))}">
                 ${SUPPORTED.map((l) => `<a class="btn btn-light${l === lang ? " active" : ""}" href="${langHref(l)}" hreflang="${l}" lang="${l}" title="${I.langs[l]}"${l === lang ? ' aria-current="true"' : ""}>${l === "ka" ? "GE" : l.toUpperCase()}</a>`).join("")}
               </div>
-              <a class="btn btn-primary btn-sm" href="${tel(C.phones[0])}"><i class="bi bi-telephone me-2"></i>${C.phones[0]}</a>
+              <a class="btn btn-primary btn-sm text-nowrap" href="${tel(C.phones[0])}" aria-label="${C.phones[0]}"><i class="bi bi-telephone"></i><span class="ms-2 d-lg-none d-xl-inline">${C.phones[0]}</span></a>
             </div>
           </div>
         </div>

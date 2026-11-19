@@ -290,3 +290,9 @@ img { max-width: 100%; }
 .vx-loc h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .35rem; }
 .vx-loc p { color: var(--vx-muted); margin: 0; font-size: .93rem; }
 .vx-loc strong { color: var(--vx-navy); }
+
+/* Узкий десктоп (992–1199px): пункты меню в одну строку */
+.vx-nav .nav-link { white-space: nowrap; }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .vx-nav .nav-link { padding-left: .55rem !important; padding-right: .55rem !important; font-size: .9rem; }
+}
