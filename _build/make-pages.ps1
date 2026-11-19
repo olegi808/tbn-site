@@ -26,7 +26,7 @@ function Page($file, $key, $pk, $title, $desc, $crumbs, $h1, $lead, $body, $h1at
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n-doc="$pk.title">$title — TBN Development</title>
   <meta name="description" content="$desc" data-i18n-content="$pk.desc">
-  <meta name="theme-color" content="#0b2b45">
+  <meta name="theme-color" content="#0f1c29">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

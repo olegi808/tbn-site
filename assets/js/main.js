@@ -44,10 +44,10 @@
   const LOGO = `
     <span class="vx-logo">
       <svg viewBox="0 0 40 40" aria-hidden="true">
-        <rect width="40" height="40" rx="9" fill="#0b2b45"/>
-        <path d="M8 17 L25 7 L33 17Z" fill="#f39200"/>
+        <rect width="40" height="40" rx="3" fill="#0f1c29"/>
+        <path d="M8 17 L25 7 L33 17Z" fill="#e8891c"/>
         <g fill="#fff"><rect x="9" y="17" width="2.4" height="16"/><rect x="13" y="17" width="2.4" height="16"/><rect x="17" y="17" width="2.4" height="16"/><rect x="21" y="17" width="2.4" height="16"/></g>
-        <rect x="25" y="17" width="8" height="16" fill="#1d7fc0"/>
+        <rect x="25" y="17" width="8" height="16" fill="#1a5f8f"/>
       </svg>
       <span class="vx-logo__text"><span class="vx-logo__name"><span class="t">T</span><span class="bn">BN</span></span><span class="vx-logo__sub">Development</span></span>
     </span>`;
@@ -200,7 +200,6 @@
     </div>`;
 
   /* Иллюстрации на главной (пока нет фото) */
-  document.querySelectorAll("[data-hero-visual]").forEach((el) => el.insertAdjacentHTML("afterbegin", D.heroSVG()));
   document.querySelectorAll("[data-about-visual]").forEach((el) => (el.innerHTML = D.buildingSVG(14, D.projects[0].palette, 2)));
 
   document.querySelectorAll("[data-projects]").forEach((el) => {
@@ -255,6 +254,22 @@
     articleHost.querySelector("[data-a-meta]").innerHTML = `<span class="vx-news__tag">${esc(L(n.tag))}</span> · <time datetime="${n.date}">${fmtDate(n.date)}</time>`;
     articleHost.querySelector("[data-a-lead]").textContent = L(n.excerpt);
     articleHost.querySelector("[data-a-visual]").innerHTML = D.newsSVG(0);
+  }
+
+  /* ---------- Видео на первом экране: пауза по кнопке и при «уменьшить движение» ---------- */
+  const heroVideo = document.querySelector("[data-hero-video]");
+  const heroToggle = document.querySelector("[data-hero-toggle]");
+  if (heroVideo && heroToggle) {
+    const sync = () => {
+      const paused = heroVideo.paused;
+      heroToggle.innerHTML = `<i class="bi bi-${paused ? "play-fill" : "pause-fill"}"></i>`;
+      heroToggle.setAttribute("aria-label", t(paused ? "h.play" : "h.pause"));
+    };
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { heroVideo.removeAttribute("autoplay"); heroVideo.pause(); }
+    heroToggle.addEventListener("click", () => (heroVideo.paused ? heroVideo.play() : heroVideo.pause()));
+    heroVideo.addEventListener("play", sync);
+    heroVideo.addEventListener("pause", sync);
+    sync();
   }
 
   /* ---------- Поведение ---------- */

@@ -24,7 +24,8 @@ window.VX_I18N = {
     "ft.privacy": "Политика конфиденциальности", "ft.legal": "ООО «Тибин Груп» (TBN Development)",
     "card.floors": "эт.", "card.apts": "кв.", "card.read": "Читать",
     "spec.status": "Статус", "spec.district": "Адрес", "spec.floors": "Этажность", "spec.apts": "Квартир", "spec.area": "Площади", "spec.price": "Цена", "spec.year": "Сдача",
-    "form.thanks": "Спасибо! Заявка принята", "form.callback": "Мы перезвоним в рабочее время:"
+    "form.thanks": "Спасибо! Заявка принята", "form.callback": "Мы перезвоним в рабочее время:",
+    "h.pause": "Пауза видео", "h.play": "Включить видео"
   },
 
   en: {
@@ -48,8 +49,8 @@ window.VX_I18N = {
     "h.h1": "Apartments near<br>the&nbsp;metro <span>at a fair price</span>",
     "h.lead": "We build multi-storey monolithic residential complexes a few minutes from metro stations — with underground parking, playgrounds and developer installments.",
     "h.ctaProjects": "Choose an apartment", "h.ctaConsult": "Get a consultation",
-    "h.b1": "Monolithic frame", "h.b2": "Installments up to 30 months", "h.b3": "Mortgage",
-    "h.badgeSmall": "Now on sale", "h.badge": "TBN Varketili — from $1,150 / m²",
+    "h.b1": "Monolithic", "h.b1d": "seismic-resistant frame", "h.b2": "30 months", "h.b2d": "installments, no bank", "h.b3": "Mortgage", "h.b3d": "partner banks",
+    "h.badgeSmall": "Now on sale", "h.badge": "14 floors · 3 min to the metro · from $1,150 / m²", "h.pause": "Pause video", "h.play": "Play video",
     "h.stats": "The company in numbers",
     "h.s1": "year founded", "h.s2": "apartments in two complexes", "h.s3": "floors — monolithic", "h.s4num": "3 min", "h.s4": "walk to the metro",
     "h.projEyebrow": "Projects", "h.projTitle": "Our residential complexes",
@@ -152,8 +153,8 @@ window.VX_I18N = {
     "h.h1": "ბინები მეტროსთან<br><span>სამართლიან ფასად</span>",
     "h.lead": "ვაშენებთ მრავალსართულიან მონოლითურ საცხოვრებელ კომპლექსებს მეტროს სადგურებიდან რამდენიმე წუთში — მიწისქვეშა პარკინგით, საბავშვო მოედნებით და განვადებით დეველოპერისგან.",
     "h.ctaProjects": "აირჩიეთ ბინა", "h.ctaConsult": "კონსულტაციის მიღება",
-    "h.b1": "მონოლითური კარკასი", "h.b2": "განვადება 30 თვემდე", "h.b3": "იპოთეკა",
-    "h.badgeSmall": "ახლა იყიდება", "h.badge": "TBN Varketili — $1 150-დან / მ²",
+    "h.b1": "მონოლითი", "h.b1d": "სეისმომედეგი კარკასი", "h.b2": "30 თვე", "h.b2d": "განვადება ბანკის გარეშე", "h.b3": "იპოთეკა", "h.b3d": "პარტნიორი ბანკები",
+    "h.badgeSmall": "ახლა იყიდება", "h.badge": "14 სართული · 3 წუთი მეტრომდე · $1 150-დან / მ²", "h.pause": "ვიდეოს შეჩერება", "h.play": "ვიდეოს ჩართვა",
     "h.stats": "კომპანია ციფრებში",
     "h.s1": "დაარსების წელი", "h.s2": "ბინა ორ კომპლექსში", "h.s3": "სართული — მონოლითი", "h.s4num": "3 წთ", "h.s4": "ფეხით მეტრომდე",
     "h.projEyebrow": "პროექტები", "h.projTitle": "ჩვენი საცხოვრებელი კომპლექსები",
